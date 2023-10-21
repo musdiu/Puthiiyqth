@@ -4,13 +4,13 @@
 
 FROM ayiinxd/ayiin-userbot:buster
 
-RUN git clone -b XCRY-UERSBOT https://github.com/JIYOXCRY/XCRY-UERSBOT /home/XCRY-UERSBOT/ \
-    && chmod 777 /home/XCRY-UERSBOT \
-    && mkdir /home/XCRY-UERSBOT/bin/
+RUN git clone -b XCRY-USERBOT https://github.com/JIYOXCRY/XCRY-USERBOT /home/XCRYUSERBOT/ \
+    && chmod 777 /home/XCRYUSERBOT \
+    && mkdir /home/XCRYUSERBOT/bin/
 
-COPY ./sample_config.env ./config.env* /home/XCRY-UERSBOT/
+COPY ./sample_config.env ./config.env* /home/XCRYUSERBOT/
 
-WORKDIR /home/XCRY-UERSBOT/
+WORKDIR /home/XCRYUSERBOT/
 
 RUN pip install -r requirements.txt
 
